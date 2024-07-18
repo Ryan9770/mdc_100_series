@@ -20,6 +20,11 @@ dev_dependencies:
 flutter:
   # TODO: Insert Fonts (103)
   uses-material-design: true
+  fonts:
+    - family: BlackOpsOne
+      fonts:
+        - asset: fonts/BlackOpsOne-Regular.ttf
+
   assets:
     - assets/diamond.png
     # TODO: Add slanted menu asset (104)
