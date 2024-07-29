@@ -35,14 +35,15 @@ class _LoginPageState extends State<LoginPage> {
             // TODO: Add TextField widgets (101)
             TextField(
               controller: _usernameController,
-              decoration: InputDecoration(
-                filled: true,
+              decoration: const InputDecoration(
                 labelText: 'Username',
               ),
             ),
             const SizedBox(height: 12.0),
             TextField(
-              decoration: InputDecoration(filled: true, labelText: 'Password'),
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
               obscureText: true,
               controller: _passwordController,
             ),
@@ -58,12 +59,24 @@ class _LoginPageState extends State<LoginPage> {
                       _usernameController.clear();
                       _passwordController.clear();
                     },
+                    style: TextButton.styleFrom(
+                      primary: Theme.of(context).colorScheme.secondary,
+                      shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                      ),
+                    ),
                   ),
                   ElevatedButton(
                     child: const Text('NEXT'),
                     onPressed: () {
                       Navigator.pop(context);
                     },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 8.0,
+                      shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                      ),
+                    ),
                   ),
                 ],
               ),
